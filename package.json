@@ -1,0 +1,23 @@
+{
+  "name": "typescript-react-electron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cls && concurrently \"cd renderer && npm start\" \"cd electron && npm start\"",
+    "clean": "concurrently \"cd renderer && npm prune\" \"cd electron && npm prune\"",
+    "build": "cls && node ./builder/builder.js",
+    "project-install": "cd electron && npm install && cd../renderer && npm install"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.1",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "typescript": "^5.2.2",
+    "wait-on": "^7.0.1"
+  }
+}

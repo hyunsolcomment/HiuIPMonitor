@@ -1,0 +1,38 @@
+
+h1,h2,h3 {
+    margin: 5px;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+div {
+    font-size: 12.5px;
+}
+
+button {
+    cursor: pointer;
+}
+
+input, button, select, option {
+    -webkit-app-region: none !important;
+    outline: 0;
+    border: 0;
+}
+
+select {
+    background: transparent;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+option {
+    background: #353535;
+    outline: 0;
+    border: 0;
+    color: white;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Pretendard Variable';
+}

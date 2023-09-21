@@ -1,0 +1,54 @@
+{
+  "name": "Hiu IP Monitor",
+  "version": "0.0.0",
+  "description": "히유 IP 모니터링, 한국 아이피일 경우 경고를 출력합니다.",
+  "devDependencies": {
+    "electron": "^26.1.0",
+    "electron-builder": "^24.6.3",
+    "nodemon": "^3.0.1",
+    "typescript": "^5.2.2"
+  },
+  "main": "./public/main.js",
+  "scripts": {
+    "start": "wait-on http://127.0.0.1:3000 && npm run electron:watch ",
+    "electron:watch": "nodemon -e ts --watch src --exec \"npm run electron:start\"",
+    "electron:start": "tsc && electron .",
+    "electron:build": "electron-builder --windows"
+  },
+  "build": {
+    "productName": "히유 IP 모니터링",
+    "appId": "me.hiu.ip-monitor",
+    "files": [
+      "./public/**/*",
+      "!*.ts",
+      "!*.map",
+      "!package.json",
+      "!package-lock.json"
+    ],
+    "asar": true,
+    "afterPack": "../assets/afterInstall.cjs",
+    "extends": null,
+    "win": {
+      "icon": "../assets/icons/icon.png"
+    },
+    "mac": {
+      "icon": "../assets/icons",
+      "target": [
+        "dmg"
+      ]
+    },
+    "linux": {
+      "icon": "../assets/icons",
+      "target": "tar.gz"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "directories": {
+      "buildResources": "../assets/",
+      "output": "../dist/",
+      "app": "."
+    }
+  }
+}

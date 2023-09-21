@@ -1,0 +1,51 @@
+.warn {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+    -webkit-app-region: no-drag;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 0 30px red inset;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: transparent;
+    flex-direction: column;
+    z-index: 999;
+    animation: fadein 0.35s ease forwards;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.warn .text-field {
+    background: #00000065;
+    width: 100%;
+    padding: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.warn .content {
+    font-weight: 830;
+    font-size: 35px;
+}
+
+.warn .sub-content {
+    display: block;
+    font-size: 25px;
+}
