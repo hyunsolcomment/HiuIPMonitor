@@ -4,7 +4,7 @@ exports.loadSettings = exports.saveSettings = exports.Settings = void 0;
 const fs = require("fs/promises");
 const main_1 = require("./main");
 exports.Settings = {
-    position: [0, 0],
+    position: undefined,
     warnEnable: true,
     warnCountry: 'KR'
 };

@@ -1,5 +1,5 @@
 {
-  "name": "Hiu IP Monitor",
+  "name": "hiu-ip-monitor",
   "version": "0.0.0",
   "description": "히유 IP 모니터링, 한국 아이피일 경우 경고를 출력합니다.",
   "devDependencies": {

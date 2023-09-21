@@ -72,12 +72,13 @@ function createWarningWindow(win: BrowserWindow) {
     if(app.isPackaged) {
 
         // 빌드된 환경
-        warnWindow.loadFile(join(__dirname,'index.html#/warn'));
+        warnWindow.loadURL(`file://${__dirname}/index.html#/warn`);
 
     } else {
         
         // 개발 환경
         warnWindow.loadURL(`http://localhost:3000#/warn`);
+
     }
 
 }

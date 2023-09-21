@@ -59,7 +59,7 @@ function createWarningWindow(win) {
     warnWindow.setIgnoreMouseEvents(true);
     if (electron_1.app.isPackaged) {
         // 빌드된 환경
-        warnWindow.loadFile((0, path_1.join)(__dirname, 'index.html#/warn'));
+        warnWindow.loadURL(`file://${__dirname}/index.html#/warn`);
     }
     else {
         // 개발 환경

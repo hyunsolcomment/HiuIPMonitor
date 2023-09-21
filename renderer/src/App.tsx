@@ -25,7 +25,7 @@ interface Info {
 }
 
 function App() {
-    useTitle("Typescript + React + Electron");
+    useTitle("히유 IP 모니터링");
 
     const [data, setData]               = useState<Info>();
     const [reloadDate,setReloadDate]    = useState<string>();
@@ -33,7 +33,7 @@ function App() {
     const [alreadyNoti, setAlreadyNoti] = useState<boolean>();
     const [ip, setIP]                   = useState<string>();
     const [setting,setSettings]         = useState<boolean>();
-    const [warnEnable,setWarnEnable]    = useState<boolean>(true);
+    const [warnEnable,setWarnEnable]    = useState<boolean>(false);
     const [warnCountry,setWarnCountry]  = useState<string>("KR");
     const [warnCountryName, setWarnCountryName] = useState<string>();
     const [settingsSaved,setSettingsSaved]      = useState<boolean>();

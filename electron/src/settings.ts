@@ -2,7 +2,7 @@ import * as fs from 'fs/promises';
 import { mainWindow } from './main';
 
 export const Settings = {
-    position: [0,0],
+    position: undefined,
     warnEnable: true,
     warnCountry: 'KR'
 }
